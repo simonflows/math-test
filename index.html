@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Тест по математике</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-container">
+    <section class="card" id="quiz-card">
+      <header class="quiz-header">
+        <div class="progress-info">
+          <span class="step-label">Вопрос <span id="current-num">1</span> из <span id="total-num">20</span></span>
+          <span class="percent-label" id="percent-label">0%</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </header>
+
+      <div class="question-wrapper" id="question-wrapper">
+        <h1 class="question-text" id="question-text">Загрузка вопроса...</h1>
+        <div class="options-list" id="options-list"></div>
+      </div>
+    </section>
+
+    <section class="card result-card" id="result-card" style="display: none;">
+      <div class="result-content">
+        <div class="result-header">
+          <span class="result-badge">Тест завершен</span>
+          <h2 class="result-title">Ваш результат</h2>
+        </div>
+
+        <div class="result-score-box">
+          <div class="score-main"><span id="score-val">0</span> из 20</div>
+          <div class="score-sub" id="score-percent">0% правильно</div>
+        </div>
+
+        <button type="button" class="btn-restart" id="btn-restart">Пройти заново</button>
+
+        <div class="verif-box" id="verif-box">
+          <div class="verif-label">Проверочный штамп подлинности</div>
+          <div class="verif-code" id="verif-code">Генерация...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
